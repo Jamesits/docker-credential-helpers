@@ -14,7 +14,7 @@ maintainer: "Jamesits <osscontrib@ciexyz.net>"
 
 depends:
 - bash
-sugguests:
+suggests:
 - azure-cli
 - docker-ce-cli
 description: |
@@ -26,9 +26,5 @@ license: "MIT"
 contents:
 - src: "./usr"
   dst: "/usr"
-  file_info:
-    mode: 0644
 - src: "./etc"
   dst: "/etc"
-  file_info:
-    mode: 0644
