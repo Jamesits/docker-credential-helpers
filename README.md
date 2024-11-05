@@ -10,13 +10,15 @@ Currently supports:
 
 ### GitLab
 
+TBD.
+
 ### Azure Container Registry
 
 Configure your `az login` args in `/etc/docker-credential-helpers/acr/<your-registry>`, then add the helper to your Docker client config.
 
 Example: using certificate authentication
 
-Create the certificate:
+Create the certificate ([EC certs not supported](https://github.com/Azure/azure-cli/issues/30254)):
 ```shell
 openssl genrsa -out device.key 4096
 openssl req -new -x509 -key device.key -out device.crt -days 720
@@ -55,9 +57,9 @@ cat > /etc/docker-credential-helpers/acr/your-registry <<EOF
 # shellcheck shell=bash
 AZ_LOGIN_OPTS=(
     "--service-principal"
-    --tenant "00000000-0000-0000-0000-000000000000" # Tenant ID
-    --username "00000000-0000-0000-0000-000000000000" # Client ID
-    --password "/etc/ssl/private/device.pem"
+    "--tenant" "00000000-0000-0000-0000-000000000000" # Tenant ID
+    "--username" "00000000-0000-0000-0000-000000000000" # Client ID
+    "--password" "/etc/ssl/private/device.pem" # Path to the client certificate
 )
 EOF
 ```
