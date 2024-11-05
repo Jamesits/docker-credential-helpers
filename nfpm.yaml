@@ -1,0 +1,34 @@
+name: "docker-credential-helpers"
+arch: "all"
+platform: "linux"
+version: "0.0.1"
+version_schema: "semver"
+version_metadata: "git"
+
+epoch: 0
+release: 1
+section: "admin"
+priority: "optional"
+
+maintainer: "Jamesits <osscontrib@ciexyz.net>"
+
+depends:
+- bash
+sugguests:
+- azure-cli
+- docker-ce-cli
+description: |
+  A bunch of Docker credential helpers.
+vendor: "none"
+homepage: "https://github.com/Jamesits/docker-credential-helpers"
+license: "MIT"
+
+contents:
+- src: "./usr"
+  dst: "/usr"
+  file_info:
+    mode: 0644
+- src: "./etc"
+  dst: "/etc"
+  file_info:
+    mode: 0644

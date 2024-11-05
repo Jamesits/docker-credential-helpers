@@ -1,0 +1,7 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: docker-credential-helpers
+Source: https://github.com/Jamesits/docker-credential-helpers
+
+Files: *
+Copyright: 2024 Jamesits
+License: MIT
