@@ -75,7 +75,7 @@ EOF
 
 ## Notes
 
-## GitLab CI Runner
+### GitLab CI Runner
 
 Bugs:
 - It always tries to use the first `credHelpers` entry regardless of the registry.
